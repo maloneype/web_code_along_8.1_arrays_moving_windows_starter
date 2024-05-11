@@ -1,7 +1,28 @@
 function solution(arr, row, col) {
   // your code here
-  return "hello world"
+  const zDimensionLength = arr[0][0].length
+  let zArr = arr[row][col]
+  let sum = 0
+  for (num of zArr) {
+    sum += num
+  }
+  return sum
 }
+
+const arr = [
+  [
+    [1, 2, 3, 4, 0, 6],
+    [7, 0, -9, 10, 11, 12],
+    [0, 14, 15, 16, 17, 18],
+  ],
+  [
+    [0, 1, 23, 17, 29, 13],
+    [1, -2, 3, 4, 5, -6],
+    [7, 0, 9, 8, 6, 1],
+  ]
+]
+
+console.log(solution(arr, 1, 2))
 
 // 3D Array - Depth Sum
 

@@ -1,7 +1,23 @@
 function solution(a, window_size) {
   // your code here
-  return "hello world"
+  let returnArr = []
+  let sum = 0
+  for (let i=0; i<a.length-window_size+1; i++){
+
+    sum = 0
+    for (let j=0; j<window_size; j++){
+      console.log(a[i+j])
+      sum += a[i+j]
+    }
+    returnArr.push(sum/window_size)
+  }
+  return returnArr
 }
+
+const a = [20, 64, 73, 58, 74]
+const window_size = 4
+console.log(solution(a, window_size))
+
 
 // Write a function that moves a "window" over an array, averaging the values under the window as it goes.
 
